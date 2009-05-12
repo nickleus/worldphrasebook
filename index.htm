@@ -1,0 +1,23 @@
+<html>
+<head>
+<script language="javascript">
+function switchToLang(language){
+// switch all page text to "language" using ajax
+alert(language)
+}
+</script>
+</head>
+
+<body onload="document.getElementsByName('searchfield')[0].focus()">
+<form action="results.htm" method="post">
+<!--<input type="text" name="searchfield" value="search" maxlength="" size="" onfocus="this.value=''" />-->
+<input type="text" name="searchfield" value="" maxlength="" size="" />
+Page Language: <select name="selectbox" onchange="switchToLang(this.options[this.selectedIndex].value)">
+<option value=""></option>
+<option value="Norwegian">Norsk</option>
+<option value="German">Deutsch</option>
+</select>
+</form>
+put these test pages on worldphrasebook.net and then let people comment on the pages to give input (or use the forum)
+</body>
+</html>

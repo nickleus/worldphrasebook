@@ -1,0 +1,53 @@
+<html>
+<head>
+<script language="javascript">
+function translate(language){
+	if(language=="German") {
+		document.getElementById("translation").innerHTML="Es war mir ein Vergnügen"
+	} else {
+		document.getElementById("translation").innerHTML="Bare hyggelig"	
+	}
+}
+function switchToLang(language){
+// switch all page text to "language" using ajax
+alert(language)
+}
+
+</script>
+</head>
+<body onload="document.getElementsByName('searchfield')[0].focus()">
+<form action="results.htm" method="post">
+<!--<input type="text" name="searchfield" value="search" maxlength="" size="" onfocus="this.value=''" />-->
+<input type="text" name="searchfield" value="" maxlength="" size="" />
+Page Language: <select name="selectbox" onchange="switchToLang(this.options[this.selectedIndex].value)">
+<option value=""></option>
+<option value="Norwegian">Norsk</option>
+<option value="German">Deutsch</option>
+</select>
+</form>
+
+<pre>
+we're going to need to translate all the languages in each language too
+translate into norwegian
+i.e. dropdown box:
+Norsk
+Tysk
+
+</pre>
+<h1>[it was] my pleasure</h1>
+<div style="float:left;width:250px;background-color:#ddd;margin:0px">
+<h2>English</h2>
+<p>it was my pleasure</p>
+<p>my pleasure</p>
+</div>
+<div style="float:left;width:250px;background-color:#ccc;margin:0px">
+<select name="selectbox" size="" style="font-size:2em;" onchange="translate(this.options[this.selectedIndex].value)">
+<option value="">Translate to:</option>
+<option value="Norwegian">Norwegian</option>
+<option value="German">German</option>
+</select>
+<div id="translation">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<script language="javascript">
+function switchToLang(language){
+// switch all page text to "language" using ajax
+alert(language)
+}
+</script>
+</head>
+<body onload="document.getElementsByName('searchfield')[0].focus()">
+<form action="results.htm" method="post">
+<!--<input type="text" name="searchfield" value="search" maxlength="" size="" onfocus="this.value=''" />-->
+<input type="text" name="searchfield" value="" maxlength="" size="" />
+Page Language: <select name="selectbox" onchange="switchToLang(this.options[this.selectedIndex].value)">
+<option value=""></option>
+<option value="Norwegian">Norsk</option>
+<option value="German">Deutsch</option>
+</select>
+</form>
+
+<pre>
+i search for "pleasure"
+
+<!--
+[it was] my pleasure:
+it was my pleasure
+my pleasure
+
+choices:
+1. link to a combination
+how do i limit results to one combination?
+the shortest?
+the longest?
+probably do the longest one
+
+which one do i choose if there are 1< long ones of the same length?
+doesn't matter
+
+2. -->link to the shorthand
+highlight the search words
+
+[it was] my pleasure <-- link
+my pleasure. it was my pleasure. <-- description. use max 2 lines and end with "..." on the last line if there are more combinations
+
+</pre>
+<a href="result.htm">[it was] my <em>pleasure</em></a><br />
+my <em>pleasure</em>. it was my <em>pleasure</em>.
+
+</body>
+</html>
